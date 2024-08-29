@@ -1,0 +1,172 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #FFFFFF;
+    color: #151515;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin: 0.25em 0;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin: 0.2em 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+a {
+    color: #151515;
+    text-decoration: none;
+}
+
+time {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =================
+    Layout 
+   ================= */
+.post-container,
+.about {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header .container,
+footer,
+ul {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =================
+    Header 
+   ================= */
+
+.logo {
+    width: 180px;
+}
+
+header .container {
+    padding: 1.25em 0;
+    justify-content: space-between;
+}
+
+/* =================
+    Navigation 
+   ================= */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+/* =================
+     Footer
+   ================= */
+
+footer {
+    flex-direction: column;
+    background-color: #151515;
+    padding: 2.5em 0;
+    font-size: 0.875rem;
+}
+
+footer p {
+    color: #ECECEC;
+    font-size: 1rem;
+}
+
+footer span {
+    color: #D7D7D7;
+}
+
+/* =================
+    Post 
+   ================= */
+.post-desc {
+    color: #505050;
+}
+
+.post-img {
+    margin: 1em 0;
+}
+
+.posts {
+    display: grid;
+    gap: 2em;
+}
+
+.recent-posts-section {
+    margin-top: 3.5em;
+}
+
+/* =================
+     Media Queries
+   ================= */
+
+@media (min-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        line-height: 1.35;
+    }
+    
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3em;
+    }
+}

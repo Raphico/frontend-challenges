@@ -1,0 +1,57 @@
+/* =================
+     Typography
+   ================= */
+
+h1 {
+    margin: 0.8em 0 0.5em;
+}   
+
+h2 {
+    font-size: 1.25rem;
+}
+
+/* =================
+     Main
+   ================= */
+
+main {
+    padding: 2em 0 3em;
+}
+
+
+.intro { 
+    margin-bottom: 3em;
+}
+
+.intro img {
+    width: 200px;
+}
+
+.about p {
+    margin-bottom: 1.25em;
+}
+
+.about h2 {
+    margin: 1.5em 0 1em;
+}
+
+.posts {
+    margin-top: .75em;
+}
+
+/* =================
+     Media queries
+   ================= */
+@media (min-width: 1024px) {
+    main {
+        background-color: #FAFAFA;
+        padding-top: 5em;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 5em;
+    }
+}

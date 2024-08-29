@@ -1,0 +1,57 @@
+/* =================
+     Typography
+   ================= */
+
+h1 {
+    margin: 0.5em 0 0.35em;
+}   
+
+h2 {
+    font-size: 1.25rem;
+}
+
+/* =================
+     Main
+   ================= */
+
+.main-section {
+    padding: 2em 0 3em;
+}
+
+.current-post img {
+    margin: 2.25em 0;
+    border-radius: 3px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.post-section p {
+    margin-bottom: 1em;
+}
+
+.post-section h2 {
+    margin: 0.75em 0;
+}
+
+.posts {
+    margin-top: .75em;
+}
+
+/* =================
+     Media Queries
+   ================= */
+
+@media (min-width: 1024px) {
+    .main-section {
+        background-color: #FAFAFA;
+        padding-top: 5em;
+    }
+
+    h1 {
+        margin: 0.5em 0 0.8em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

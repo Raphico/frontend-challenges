@@ -1,0 +1,57 @@
+/* =================
+     Typography
+   ================= */
+   
+.view-more {
+    display: block;
+    font-size: 1.125rem;
+    margin: 1.5em 0 2em;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+/* =================
+     Main
+   ================= */
+
+.hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-image: url("../images/article-image-hero.png");
+    background-size: cover;
+    background-position: center;
+    padding: 1.5em 0;
+    height: 400px;
+}
+
+.hero article {
+    margin-top: auto;
+    color: #FFFFFF;
+}
+
+.posts {
+    margin-top: 2em;
+}
+
+/* =================
+     Media Queries
+   ================= */
+
+@media (min-width: 480px) {
+    h1,
+    p {
+        max-width: 700px;
+    }
+    
+    .hero {
+        padding-bottom: 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 500px;
+    }
+}
