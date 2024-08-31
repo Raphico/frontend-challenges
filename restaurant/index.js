@@ -3,19 +3,20 @@ import { menuArray } from "./data.js";
 const checkoutContainer = document.getElementById("checkoutContainer");
 const modal = document.getElementById("modal");
 const modalForm = document.getElementById("modalForm");
+const menu = document.getElementById("menu");
 
 let ordersArray = [];
 
 populateMenu(menuArray);
 
-menuArray.forEach((item) => {
-    const addItemBtn = document.getElementById(`add${item.id}Btn`) 
-    addItemBtn.addEventListener("click", () => {
+menu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("add-item-btn")) {
+        const id = e.target.id.replace(/[^0-9]/g, '');
+        const item = menuArray.find((item) => item.id === parseInt(id));
         addItemToOrder(item);
         displayOrder(ordersArray);
-
-        addItemBtn.disabled = true;
-    })
+        e.target.disabled = true;
+    }
 })
 
 modalForm.addEventListener("submit", (e) => {
@@ -36,7 +37,6 @@ function reset() {
     menuArray.forEach((item) => {
         document.getElementById(`add${item.id}Btn`).disabled = false; 
     })
-
 }
 
 function displayOrder(ordersArray) {
@@ -73,11 +73,11 @@ function displayOrder(ordersArray) {
 
     checkoutContainer.innerHTML = orders;
 
-    ordersArray.forEach((order) => {
-        const removeItemBtn = document.getElementById(`remove${order.id}Btn`);
-        removeItemBtn.addEventListener("click", () => {
-            displayOrder(removeItem(order));
-        })
+    checkoutContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove-item-btn")) {
+            const id = e.target.id.replace(/[^0-9]/g, '');
+            displayOrder(removeOrder(id));
+        }
     })
 
     document.getElementById("orderBtn").addEventListener("click", () => {
@@ -85,9 +85,9 @@ function displayOrder(ordersArray) {
     })
 }
 
-function removeItem(item) {
-    document.getElementById(`add${item.id}Btn`).disabled = false;
-    ordersArray = ordersArray.filter(i => i.id !== item.id); 
+function removeOrder(id) {
+    document.getElementById(`add${id}Btn`).disabled = false;
+    ordersArray = ordersArray.filter((item) => parseInt(id) !== item.id); 
     return ordersArray;
 }
 
