@@ -1,0 +1,204 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Smythe", system-ui;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+/* Typography */
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+header p {
+    font-size: 1.125rem;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+}
+
+.item-icon {
+    font-size: 3.5rem;
+}
+
+.item-desc {
+    margin: 0.25em 0 0.75em;
+    color: #8B8B8B;
+}
+
+/* Layout */
+.menu-item,
+.item-details,
+.add-item-btn,
+.order-item,
+.order,
+.total-price {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Button */
+
+.btn {
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    width: 100%;
+    border: none;
+    background-color: #16DB99;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+/* Header */
+
+header {
+    background-image: url("images/hamburger.png");
+    background-size: cover;
+    color: #FFFFFF;
+    height: 120px;
+    padding: 1.5em;
+}
+
+/* Menu */
+
+.menu {
+    margin: 2.5em 0;
+}
+
+.menu-item {
+    justify-content: space-between;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.item-details {
+    gap: 1em;
+}
+
+.add-item-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1.5px solid #DEDEDE;
+    color: #3C3C3C;
+    font-size: 1.125rem;
+    padding: 0.75em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+/* Checkout */
+
+.checkout-container {
+    padding-bottom: 5em;
+}
+
+.your-order {
+    margin-bottom: 2em;
+}
+
+.order-item {
+    margin: 1em 0;
+    justify-content: space-between;
+}
+
+.remove-item-btn {
+    cursor: pointer;
+    border: none;
+    color: #8B8B8B;
+    background-color: transparent;
+    margin-left: 0.5em;
+}
+
+.total-price {
+    justify-content: space-between;
+    border-top: 2px solid #333333;
+    padding-top: 0.5em;
+    margin: 1.25em 0 2.5em;
+}
+
+.gratitude {
+    background-color: #ECFDF5;
+    color: #065F46;
+    padding: 2em 0.5em;
+}
+
+.gratitude p {
+    font-size: 1.5rem;
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    font-family: "Open Sans", sans-serif;
+    align-items: center;
+    justify-content: center ;
+    position: fixed;
+    inset: 0;
+    margin: 0;
+    background-color: #00000080;
+}
+
+.inner-modal {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 1em;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    
+}
+
+/* form */
+
+.modal-form {
+    margin-top: 1.75em;
+}
+
+input {
+    font-family: inherit;
+    border: 1.3px solid #757575;
+    border-radius: 3px;
+    padding: 1em;
+    width: 100%;
+    margin-bottom: 1.25em;
+}
+
+.modal-form button {
+    margin-top: 1em;
+}
