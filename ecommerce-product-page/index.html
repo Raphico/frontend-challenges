@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>Frontend Mentor | E-commerce product page</title>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-content">
+                <button
+                    id="menuBtn"
+                    class="btn btn-primary menu-btn"
+                    aria-controls="navigation"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <img
+                        class="icon-menu"
+                        src="./images/icon-menu.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                    <img
+                        class="icon-close"
+                        src="./images/icon-close.svg"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                </button>
+                <img
+                    src="./images/logo.svg"
+                    alt="Sneakers's logo"
+                    class="site-logo"
+                />
+                <nav id="navigation" class="navigation">
+                    <ul role="list" class="nav-list">
+                        <li><a href="#">collections</a></li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div id="cartContainer" class="cart-container">
+                        <button
+                            id="cartBtn"
+                            class="btn btn-primary"
+                            aria-label="View your cart"
+                            aria-controls="cart"
+                            aria-expanded="false"
+                        >
+                            <img src="./images/icon-cart.svg" aria-hidden="true" />
+                        </button>
+
+                        <div id="cart" class="cart" role=dialog aria-labelledby="cartTitle" aria-live="polite">
+                            <h2 class="cart-title">Cart</h2>
+                            <div id="cartContent" class="cart-content">
+                                <p class="empty-state clr-neutral-400">Your cart is empty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img
+                        src="./images/image-avatar.png"
+                        alt="User avatar"
+                        class="user-avatar"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-content">
+                <section class="product-img-section">
+                    <div id="currentProductImg" class="current-product-img" aria-live="polite">
+                        <img
+                            src="./images/image-product-1.jpg"
+                            alt="Current main view of product 1"
+                        />
+                    </div>
+                    <div id="productThumbnails" class="product-thumbnails">
+                        <button
+                            id="1"
+                            class="current btn btn-primary product-thumbnail"
+                            aria-label="Select product 1"
+                        >
+                            <img
+                                src="./images/image-product-1-thumbnail.jpg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
+                        <button
+                            id="2"
+                            class="btn btn-primary product-thumbnail"
+                            aria-label="Select product 2"
+                        >
+                            <img
+                                src="./images/image-product-2-thumbnail.jpg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
+                        <button
+                            id="3"
+                            class="btn btn-primary product-thumbnail"
+                            aria-label="Select product 3"
+                        >
+                            <img
+                                src="./images/image-product-3-thumbnail.jpg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
+                        <button
+                            id="4"
+                            class="btn btn-primary product-thumbnail"
+                            aria-label="Select product 4"
+                        >
+                            <img
+                                src="./images/image-product-4-thumbnail.jpg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
+                    </div>
+                    <button
+                        id="prevProductBtn"
+                        class="product-btn prev-product-btn"
+                        aria-label="View previous product"
+                    >
+                        <img
+                            src="./images/icon-previous.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </button>
+                    <button
+                        id="nextProductBtn"
+                        class="product-btn next-product-btn"
+                        aria-label="View next product"
+                    >
+                        <img
+                            src="./images/icon-next.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </button>
+                </section>
+
+                <section class="product-info">
+                    <span class="company-name clr-neutral-400"
+                        >sneaker company</span
+                    >
+                    <h1 class="product-title">fall limited edition sneakers</h1>
+                    <p class="clr-neutral-400">
+                        These low-profile sneakers are your perfect casual wear
+                        companion. Featuring a durable rubber outer sole,
+                        they'll withstand everything the weather can offer
+                    </p>
+                    <div class="product-price">
+                        <div class="discount">
+                            <p
+                                class="discounted-price"
+                                aria-label="Discounted price of $125.00"
+                            >
+                                $125.00
+                            </p>
+                            <p
+                                class="product-discount"
+                                aria-label="Discount of 50%"
+                            >
+                                50%
+                            </p>
+                        </div>
+                        <s class="original-price clr-neutral-400 aria-label="Original price of $250.00">$250.00</s>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-control">
+                            <button
+                                id="decrementBtn"
+                                class="btn btn-primary decrement-btn"
+                                aria-label="Reduce quantity"
+                            >
+                                <img
+                                    src="./images/icon-minus.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </button>
+                            <p id="quantity" aria-live="polite" class="quantity">0</p>
+                            <button
+                                id="incrementBtn"
+                                class="btn btn-primary increment-btn"
+                                aria-label="Increase quantity"
+                            >
+                                <img
+                                    src="./images/icon-plus.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </button>
+                        </div>
+                        <button
+                            id="addToCartBtn"
+                            class="btn btn-secondary add-to-cart-btn"
+                            aria-label="Add to cart"
+                        >
+                            <svg
+                                aria-hidden="true"
+                                width="22"
+                                height="20"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                                    fill="#"
+                                    fill-rule="nonzero"
+                                />
+                            </svg>
+                            Add to cart
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script type="module" src="./index.js"></script>
+        <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+    </body>
+</html>
