@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./index.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rest countries Api</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1>Where in the world?</h1>
+                <button
+                    id="toggleThemeBtn"
+                    class="toggle-mode-btn"
+                    aria-label="toggle color theme"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                    dark mode
+                </button>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <form class="filter-form">
+                    <label class="search-input">
+                        <span class="sr-only">Search for a country</span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            id="country"
+                            name="country"
+                            type="text"
+                            placeholder="Search for a country..."
+                        />
+                    </label>
+
+                    <div class="dropdown">
+                        <button
+                            id="dropdownBtn"
+                            class="dropdown-btn"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            type="button"
+                        >
+                            <span id="dropdownBtnText">Filter by region</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <ul
+                            id="dropdownContent"
+                            class="dropdown-content"
+                            role="listbox"
+                            aria-labelledby="dropdownBtn"
+                        >
+                            <li data-value="africa" role="option" tabindex="0">
+                                africa
+                            </li>
+                            <li data-value="america" role="option" tabindex="0">
+                                america
+                            </li>
+                            <li data-value="asia" role="option" tabindex="0">
+                                asia
+                            </li>
+                            <li data-value="europe" role="option" tabindex="0">
+                                europe
+                            </li>
+                            <li data-value="oceania" role="option" tabindex="0">
+                                oceania
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+                <section
+                    id="regions"
+                    class="regions"
+                    aria-live="polite"
+                ></section>
+            </div>
+        </main>
+        <script src="./index.js" type="module"></script>
+        <script
+            src="https://kit.fontawesome.com/3805ff3f22.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
